@@ -51,8 +51,6 @@ const Board = () =>  {
     if (winner) {
       return
     }
- 
-    console.log(e.target);
     const index = e.target.id; // Getting ID of clicked square
     const currentPlayer = count % 2 === 0 ? 'X' : 'O';
 
@@ -60,8 +58,6 @@ const Board = () =>  {
     newColors[index] = count % 2 === 0 ? 'blue' : 'red';
     setSquareColors(newColors);
     
-    console.log(currentPlayer);
-
     if (board[index] === null) {
       const newBoard = [...board];
       newBoard[index] = currentPlayer;
